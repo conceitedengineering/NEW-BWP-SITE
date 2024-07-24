@@ -1,0 +1,128 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff;
+    color: #000;
+    text-align: left;
+}
+
+.container {
+    max-width: 2000px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.title {
+    font-size: 130px;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 10px; /* Adding space between title words */
+    justify-content: left;
+}
+
+.titleactive {
+    font-size: 130px;
+    margin-bottom: 10px;
+    color: #000;
+}
+
+.title a, .titleactive a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Keep original text color */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+.title a:hover, .titleactive a:hover {
+    color: #00ff00; /* Hover color */
+}
+
+.highlight-red {
+    color: red;
+}
+
+.highlight-pink {
+    color: #ff00ff;
+}
+
+.highlight-blue {
+    color: blue;
+}
+
+.description {
+    max-width: 60vw;
+    font-size: 32px;
+    line-height: 1.1;
+    margin-bottom: 40px;
+}
+
+.email {
+    font-size: 28px;
+    margin-top: 20px;
+}
+
+footer {
+    position: fixed;
+    bottom: 20px;
+    width: 100vw;
+    background-color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: left;
+    gap: 20px;
+    flex-wrap: wrap; /* Enable wrapping on smaller screens */
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #000;
+    font-size: 64px;
+    transition: color 0.2s; /* Smooth transition */
+}
+
+.navbar a:hover {
+    color: #00ff00; /* Hover color */
+}
+
+.navbar a.active {
+    color: #00ff00; /* Active link color */
+}
+
+.link {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Responsive styling for smaller screens */
+@media (max-width: 600px) {
+    .navbar a {
+        font-size: 32px; /* Reduce font size for mobile */
+        padding: 10px 0; /* Add vertical padding for touch targets */
+        flex: 1 1 auto; /* Allow flex items to grow */
+    }
+
+    .title, .titleactive {
+        font-size: 72px; /* Smaller title font size on mobile */
+        flex-direction: column; /* Stack title words vertically */
+        align-items: flex-start; /* Align items to the left */
+    }
+
+    .description {
+        font-size: 20px; /* Smaller font size for readability */
+        line-height: 1.4; /* Adjust line height for mobile */
+    }
+
+    .email {
+        font-size: 20px; /* Smaller email font size on mobile */
+    }
+
+    .container {
+        padding: 10px; /* Smaller padding for compact design */
+    }
+
+    footer {
+        bottom: 10px; /* Adjust bottom margin */
+    }
+}
